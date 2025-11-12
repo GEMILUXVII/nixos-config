@@ -19,11 +19,51 @@
     efiSupport = true;
     devices = [ "nodev" ]; 
     useOSProber = true;
-    #  gfxmodeEfi = "1920x1200,auto";
+    # gfxmodeEfi = "1920x1200,auto";
   };
-
+ 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+# === NVIDIA CONFIGURATION FOR LAPTOP ===
+
+  # Enable OpenGL
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  # Configure the NVIDIA driver
+  hardware.nvidia = {
+    open = true;
+    
+    prime = {
+      sync.enable = true;
+      amdgpuBusId = "PCI:6:0:0";
+      nvidiaBusId = "PCI:1:0:0";
+};
+  };
+
+  # Load the nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+# === END OF NVIDIA CONFIGURATION ===
+
+  # boot.loader.systemd-boot.configurationLimit = 10;
+  boot.loader.grub.configurationLimit = 10;
+
+  # Do garbage collection weekly to keep disk usage low.
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
+  };
+
+  # Optimise storage
+  # you can also optimise the store manually via:
+  #    nix-store --optimise
+  # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
+  nix.settings.auto-optimise-store = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -34,9 +74,15 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  
+  networking.networkmanager.dns = "none";
 
-  #substituters mirrors
+  # DNS setting: ALiyun DNS
+  networking.nameservers = [ "223.5.5.5" "223.6.6.6" ];
+
+  # Nix setting: enable flakes & substituters
    nix.settings = {
+      experimental-features = [ "nix-command" "flakes" ];
       substituters = [
         "https://mirror.sjtu.edu.cn/nix-channels/store"
         "https://cache.nixos.org"
@@ -67,6 +113,14 @@
     LC_TIME = "zh_CN.UTF-8";
   };
 
+  # Install zsh
+  programs.zsh = {
+    enable = true;
+    enableBashCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+  };
+
   # fcitx5
   environment.variables = {
     GTK_IM_MODULE = "fcitx";
@@ -78,20 +132,20 @@
     type = "fcitx5";
     fcitx5.addons = with pkgs; [
       fcitx5-rime
-      fcitx5-chinese-addons
+      qt6Packages.fcitx5-chinese-addons
     ];
   };
   
   # Fonts
   fonts.packages = with pkgs; [
-    jetbrains-mono
+    nerd-fonts.zed-mono
     sarasa-gothic
     nerd-font-patcher
     noto-fonts-color-emoji
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
-    noto-fonts-emoji
+    noto-fonts-color-emoji
   ];
  
   # Enable the X11 windowing system.
@@ -101,6 +155,9 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+
+  # Niri
+  programs.niri.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -130,19 +187,20 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.destin = {
     isNormalUser = true;
     description = "Destin";
     extraGroups = [ "networkmanager" "wheel" ];
+    useDefaultShell = true;
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
     ];
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # V2raya
   services.v2raya.enable = true;
@@ -155,11 +213,17 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+  lshw
   git
+  zsh
+  steam
   v2raya
   fastfetch
   qq
+  qqmusic
+  splayer
   wechat
+  aegisub
   google-chrome
   ghostty
   telegram-desktop
