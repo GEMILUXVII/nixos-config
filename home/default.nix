@@ -9,6 +9,7 @@
     ./apps/zsh.nix
     ./apps/starship.nix
     ./apps/ghostty.nix
+    ./apps/git.nix
   ];
 
   # User info
