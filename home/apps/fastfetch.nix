@@ -123,6 +123,12 @@
           "type": "memory"
         },
         {
+          "type": "disk",
+          "key": "{$1}Disk (/)",
+          "keyColor": "38;5;148",
+          "folders": "/",
+        },
+        {
           "type": "sound",
           "key": "{$1}Sound",
           "keyColor": "38;5;190"

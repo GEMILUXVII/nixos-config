@@ -4,33 +4,40 @@
 {
   programs.git = {
     enable = true;
-    userName = "Destin";
-    userEmail = "yuymay27@gmail.com";
     
-    extraConfig = {
+    # 使用新的 settings 格式
+    settings = {
+      user = {
+        name = "Destin";
+        email = "yuymay27@gmail.com";
+      };
+      
       core = {
         editor = "nano";
       };
+      
       safe = {
         directory = "/etc/nixos";
       };
+      
       init = {
         defaultBranch = "main";
       };
+      
       pull = {
         rebase = false;
       };
-    };
-    
-    # Git aliases for convenience
-    aliases = {
-      st = "status";
-      co = "checkout";
-      br = "branch";
-      ci = "commit";
-      lg = "log --oneline --graph --decorate --all";
-      last = "log -1 HEAD";
-      unstage = "reset HEAD --";
+      
+      # Git aliases for convenience
+      alias = {
+        st = "status";
+        co = "checkout";
+        br = "branch";
+        ci = "commit";
+        lg = "log --oneline --graph --decorate --all";
+        last = "log -1 HEAD";
+        unstage = "reset HEAD --";
+      };
     };
   };
 
