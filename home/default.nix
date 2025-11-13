@@ -6,6 +6,8 @@
     ./packages.nix
     ./programs.nix
     ./fastfetch.nix
+    ./zsh.nix
+    ./starship.nix
   ];
 
   # User info
