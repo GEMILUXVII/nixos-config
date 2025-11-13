@@ -11,11 +11,6 @@
   # DNS setting: Aliyun DNS
   networking.nameservers = [ "223.5.5.5" "223.6.6.6" ];
 
-  # Hosts
-  networking.hosts = {
-    "140.82.114.4" = ["github.com"];
-  };
-
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
