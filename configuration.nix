@@ -4,16 +4,16 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./modules/boot.nix
-    ./modules/nix.nix
-    ./modules/networking.nix
-    ./modules/localization.nix
-    ./modules/desktop.nix
+    ./modules/system/boot.nix
+    ./modules/system/nix.nix
+    ./modules/system/networking.nix
+    ./modules/system/localization.nix
+    ./modules/system/users.nix
+    ./modules/system/services.nix
+    ./modules/desktop/desktop.nix
+    ./modules/desktop/programs.nix
+    ./modules/desktop/packages.nix
     ./modules/hardware/nvidia.nix
-    ./modules/programs.nix
-    ./modules/services.nix
-    ./modules/users.nix
-    ./modules/packages.nix
   ];
 
   # This value determines the NixOS release from which the default

@@ -5,10 +5,10 @@
   imports = [
     ./packages.nix
     ./programs.nix
-    ./fastfetch.nix
-    ./zsh.nix
-    ./starship.nix
-    ./ghostty.nix
+    ./apps/fastfetch.nix
+    ./apps/zsh.nix
+    ./apps/starship.nix
+    ./apps/ghostty.nix
   ];
 
   # User info
