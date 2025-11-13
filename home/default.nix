@@ -8,6 +8,7 @@
     ./fastfetch.nix
     ./zsh.nix
     ./starship.nix
+    ./ghostty.nix
   ];
 
   # User info
