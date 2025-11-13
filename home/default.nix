@@ -5,9 +5,9 @@
   imports = [
     ./packages.nix
     ./programs.nix
-    ./apps/fastfetch.nix
+    ./apps/fastfetch/fastfetch.nix
     ./apps/zsh.nix
-    ./apps/starship.nix
+    ./apps/starship/starship.nix
     ./apps/ghostty.nix
     ./apps/git.nix
   ];

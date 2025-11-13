@@ -1,5 +1,5 @@
 <h1 align="center">
-   <img src="NixOS Logo/nix-snowflake-rainbow.png" alt="NixOS Logo" width="100px" />
+   <img src="nixos-logo/nix-snowflake-rainbow.png" alt="NixOS Logo" width="100px" />
    <br>
    NixOS Configuration
    <br>

@@ -4,7 +4,7 @@
 {
   # Link NixOS logo for fastfetch
   home.file.".config/fastfetch/nixos-logo.png" = {
-    source = ../../. + "/NixOS Logo/nix-snowflake-rainbow.png";
+    source = ../../../nixos-logo/nix-snowflake-rainbow.png;
     force = true;
   };
   
