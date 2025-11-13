@@ -56,5 +56,8 @@
     splayer
     obs-studio
     aegisub
+
+    # Mail Client
+    thunderbird
   ];
 }

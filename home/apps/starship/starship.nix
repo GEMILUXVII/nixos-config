@@ -190,10 +190,10 @@
       behind = "[\u21E3$${count} ](fg:behind)"
       diverged = "[\u2195\u21E1$${ahead_count} \u21E3$${behind_count} ](fg:diverged)"
       up_to_date = "[\u2714 ](fg:uptodate)"
-      untracked = "[󰟉.$${count} ](fg:untracked)"
+      untracked = "[󰟉$${count} ](fg:untracked)"
       stashed = "[\ueb29$${count} ](fg:stashed)"
       modified = "[\uf040$${count} ](fg:modified)"
-      staged = "[\u26DF .$${count} ](fg:staged)"
+      staged = "[\u26DF+$${count} ](fg:staged)"
       renamed = "[\u0373$${count} ](fg:renamed)"
       deleted = "[\uea81$${count} ](fg:deleted)"
       disabled = false
