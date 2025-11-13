@@ -158,7 +158,7 @@
       symbol = "php "
 
       [python]
-      format = "[\u3009$${symbol}$${pyenv_prefix}(($${version} ))(($virtualenv) )]($style)"
+      format = "[\u3009''${symbol}''${pyenv_prefix}((''${version} ))((''$virtualenv) )]($style)"
       style = 'fg:python'
       symbol = "\ue73c "
       pyenv_version_name = true
@@ -169,7 +169,7 @@
       symbol = "\ue702"
 
       [git_commit]
-      format = '[\($hash$tag\)]($style)[ ]()'
+      format = '[(\(''${hash}''${tag}\))]($style)[ ]()'
       style = 'fg:orangegit'
       commit_hash_length = 8
       tag_symbol = " \uf412 "
@@ -177,7 +177,7 @@
       disabled = false
 
       [git_metrics]
-      format = '[\[+$added/]($added_style)[-$deleted\]]($deleted_style)[ ]()'
+      format = '[\[+''${added}/]($added_style)[-''${deleted}\]]($deleted_style)[ ]()'
       added_style = 'fg:orangegit'
       deleted_style = 'fg:orangegit'
       disabled = false
@@ -185,17 +185,17 @@
       [git_status]
       format = '([$all_status$ahead_behind]($style))'
       style = 'fg:orangegit'
-      conflicted = "[\ueaaf$${count} ](fg:conflicted)"
-      ahead = "[\u21E1$${count} ](fg:ahead)"
-      behind = "[\u21E3$${count} ](fg:behind)"
-      diverged = "[\u2195\u21E1$${ahead_count} \u21E3$${behind_count} ](fg:diverged)"
+      conflicted = "[\ueaaf''${count} ](fg:conflicted)"
+      ahead = "[\u21E1''${count} ](fg:ahead)"
+      behind = "[\u21E3''${count} ](fg:behind)"
+      diverged = "[\u2195\u21E1''${ahead_count} \u21E3''${behind_count} ](fg:diverged)"
       up_to_date = "[\u2714 ](fg:uptodate)"
-      untracked = "[󰟉$${count} ](fg:untracked)"
-      stashed = "[\ueb29$${count} ](fg:stashed)"
-      modified = "[\uf040$${count} ](fg:modified)"
-      staged = "[\u26DF+$${count} ](fg:staged)"
-      renamed = "[\u0373$${count} ](fg:renamed)"
-      deleted = "[\uea81$${count} ](fg:deleted)"
+      untracked = "[󰟉''${count} ](fg:untracked)"
+      stashed = "[\ueb29''${count} ](fg:stashed)"
+      modified = "[\uf040''${count} ](fg:modified)"
+      staged = "[\u26DF+''${count} ](fg:staged)"
+      renamed = "[\u0373''${count} ](fg:renamed)"
+      deleted = "[\uea81''${count} ](fg:deleted)"
       disabled = false
 
       [fill]
@@ -203,7 +203,7 @@
       symbol = "\u2500"
 
       [status]
-      format = "[$symbol $status $hex_status( \uf0a2 $signal_number-$signal_name)]($style)"
+      format = "[$symbol $status ''${hex_status}( \uf0a2 ''${signal_number}-''${signal_name})]($style)"
       style = 'fg:status'
       symbol = " \u2717"
       disabled = false
@@ -217,7 +217,7 @@
       disabled = false
 
       [memory_usage]
-      format = "[ \ueab5 ](fg:memory bold)[$symbol $${ram} $${swap}]($style)"
+      format = "[ \ueab5 ](fg:memory bold)[$symbol ''${ram} ''${swap}]($style)"
       style = "fg:memory"
       symbol = "\ueb50 \uebcb"
       threshold = 75
