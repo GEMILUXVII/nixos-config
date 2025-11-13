@@ -2,27 +2,18 @@
 { config, pkgs, ... }:
 
 {
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # System-level packages
+  # User applications should be installed via Home Manager
   environment.systemPackages = with pkgs; [
     # System tools
     lshw
     git
     zsh
-    fastfetch
     
-    # Applications
-    steam
+    # System services
     v2raya
-    qq
-    qqmusic
-    splayer
-    wechat
-    aegisub
-    google-chrome
-    ghostty
-    telegram-desktop
-    obs-studio
-    vscode
+    
+    # Gaming (requires system-level for 32-bit support)
+    steam
   ];
 }

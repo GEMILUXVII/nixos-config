@@ -7,28 +7,25 @@
     ./programs.nix
   ];
 
-  # Basic user information
+  # User info
   home.username = "destin";
   home.homeDirectory = "/home/destin";
 
-  # 直接将当前文件夹的配置文件，链接到 Home 目录下的指定位置
+  # Link config files to home directory
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
-  # 递归将某个文件夹中的文件，链接到 Home 目录下的指定位置
+  # Recursively link folder contents
   # home.file.".config/i3/scripts" = {
   #   source = ./scripts;
-  #   recursive = true;   # 递归整个文件夹
-  #   executable = true;  # 将其中所有文件添加「执行」权限
+  #   recursive = true;
+  #   executable = true;
   # };
 
-  # 直接以 text 的方式，在 nix 配置文件中硬编码文件内容
+  # Define file content inline
   # home.file.".xxx".text = ''
-  #     xxx
+  #   content here
   # '';
 
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
+  # Home Manager release version
   home.stateVersion = "25.05";
 }
