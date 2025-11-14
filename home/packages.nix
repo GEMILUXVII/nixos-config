@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     # File management
     nnn # terminal file manager
+    yazi # modern terminal file manager
     
     # Archives
     zip
