@@ -158,7 +158,7 @@
       symbol = "php "
 
       [python]
-      format = "[\u3009''${symbol}''${pyenv_prefix}((''${version} ))((''$virtualenv) )]($style)"
+      format = "[\u3009''${symbol}''${pyenv_prefix}((''${version} ))((''${virtualenv}) )]($style)"
       style = 'fg:python'
       symbol = "\ue73c "
       pyenv_version_name = true
