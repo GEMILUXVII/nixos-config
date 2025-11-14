@@ -13,7 +13,6 @@
     # System services
     v2raya
     
-    # Gaming (requires system-level for 32-bit support)
-    steam
+    # Gaming - Steam is now configured in steam.nix using programs.steam
   ];
 }

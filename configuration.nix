@@ -13,6 +13,7 @@
     ./modules/desktop/desktop.nix
     ./modules/desktop/programs.nix
     ./modules/desktop/packages.nix
+    ./modules/desktop/steam.nix
     ./modules/hardware/nvidia.nix
   ];
 

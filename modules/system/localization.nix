@@ -45,6 +45,19 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
-    noto-fonts-color-emoji
+    source-han-sans
+    source-han-serif
+    wqy_microhei
+    wqy_zenhei
   ];
+
+  # Font configuration for better CJK support
+  fonts.fontconfig = {
+    defaultFonts = {
+      serif = [ "Noto Serif CJK SC" "Noto Serif" ];
+      sansSerif = [ "Noto Sans CJK SC" "Noto Sans" ];
+      monospace = [ "Sarasa Mono SC" "Noto Sans Mono CJK SC" ];
+      emoji = [ "Noto Color Emoji" ];
+    };
+  };
 }
