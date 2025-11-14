@@ -25,6 +25,9 @@
       # Text rendering
       bold-is-bright = true
 
+      # Terminal type - use xterm-256color for better compatibility
+      term = xterm-256color
+
       # Mouse & Links
       link-url = true
       mouse-hide-while-typing = true
