@@ -45,6 +45,7 @@
     
     # Browsers
     google-chrome
+    microsoft-edge
     
     # Communication
     telegram-desktop
