@@ -41,6 +41,9 @@
     vscode
     zig
     zls
+    gfortran
+    cmake
+    gnumake
     
     # Terminal
     ghostty
