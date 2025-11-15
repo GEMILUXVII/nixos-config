@@ -13,6 +13,5 @@
     # System services
     v2raya
     
-    # Gaming - Steam is now configured in steam.nix using programs.steam
   ];
 }

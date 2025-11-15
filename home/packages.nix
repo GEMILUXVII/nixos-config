@@ -39,6 +39,8 @@
     
     # Development
     vscode
+    zig
+    zls
     
     # Terminal
     ghostty
