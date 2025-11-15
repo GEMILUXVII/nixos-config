@@ -55,7 +55,7 @@
     wechat
     
     # Media
-    qqmusic
+    # qqmusic - 使用 Flatpak 版本（中文显示正常）
     splayer
     obs-studio
     aegisub
