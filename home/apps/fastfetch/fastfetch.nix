@@ -20,7 +20,8 @@
         "width": 19,
         "height": 8,
         "padding": {
-          "right": 2
+          "right": 2,
+          "left": 2
         }
       },
       "display": {
