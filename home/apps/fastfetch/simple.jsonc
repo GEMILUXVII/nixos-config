@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "~/.config/fastfetch/nixos-logo.png",
+    "width": 19,
+    "height": 8,
+    "padding": {
+      "right": 2
+    }
+  },
+  "display": {
+    "color": "magenta"
+  },
+  "modules": [
+    {
+      "key": "SYS",
+      "type": "os"
+    },
+    {
+      "key": "KER",
+      "type": "kernel"
+    },
+    {
+      "type": "disk",
+      "key": "AGE",
+      "condition": { "!system": "macOS" },
+      "folders": "/",
+      "format": "{create-time:10} [{days} days]"
+    },
+    {
+      "key": "SHL",
+      "type": "shell"
+    },
+    {
+      "key": "TRM",
+      "type": "terminal"
+    },
+    {
+      "key": "PKG",
+      "type": "packages"
+    },
+    {
+      "key": "CPU",
+      "type": "cpu",
+      "format": "{name} [{cores-physical}C / {cores-logical}T] @ {freq-max}",
+      "showPeCoreCount": false
+    },
+    {
+      "type": "gpu",
+      "key": "GPU",
+      "driverSpecific": true,
+      "format": "{name} [{type}] - {driver}"
+    },
+    {
+      "key": "MEM",
+      "type": "memory"
+    },
+    {
+      "type": "disk",
+      "key": "DSK",
+      "folders": "/"
+    },
+    {
+      "type": "datetime",
+      "key": "FET",
+      "format": "{year}-{month-pretty}-{day-pretty} {hour-pretty}:{minute-pretty}:{second-pretty} {timezone-name}"
+    },
+    {
+      "type": "colors"
+    }
+  ]
+}
