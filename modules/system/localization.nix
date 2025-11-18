@@ -39,6 +39,7 @@
   # Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.zed-mono
+    maple-mono.NF # Maple Mono Nerd Font
     sarasa-gothic
     nerd-font-patcher
     noto-fonts-color-emoji

@@ -13,6 +13,7 @@
       theme = Carbonfox
 
       # Font
+      font-family = "Maple Mono NF"
       font-size = 15
 
       # Cursor
