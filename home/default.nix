@@ -8,7 +8,7 @@
     ./apps/fastfetch/fastfetch.nix
     ./apps/zsh.nix
     ./apps/starship/starship.nix
-    ./apps/ghostty.nix
+    ./apps/ghostty/ghostty.nix
     ./apps/git.nix
   ];
 
