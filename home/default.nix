@@ -10,6 +10,7 @@
     ./apps/starship/starship.nix
     ./apps/ghostty/ghostty.nix
     ./apps/git.nix
+    ./apps/fontconfig.nix
   ];
 
   # User info
