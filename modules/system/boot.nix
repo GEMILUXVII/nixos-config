@@ -12,7 +12,7 @@
     devices = [ "nodev" ]; 
     useOSProber = true;
     # gfxmodeEfi = "1920x1200,auto";
-    configurationLimit = 10;
+    configurationLimit = 7;
   };
  
   # Use latest kernel
