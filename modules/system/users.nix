@@ -9,7 +9,10 @@
   users.users.destin = {
     isNormalUser = true;
     description = "Destin";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     useDefaultShell = true;
     packages = with pkgs; [
       kdePackages.kate

@@ -4,30 +4,30 @@
 {
   programs.git = {
     enable = true;
-    
+
     # 使用新的 settings 格式
     settings = {
       user = {
         name = "Destin";
         email = "yuymay27@gmail.com";
       };
-      
+
       core = {
         editor = "nano";
       };
-      
+
       safe = {
         directory = "/etc/nixos";
       };
-      
+
       init = {
         defaultBranch = "main";
       };
-      
+
       pull = {
         rebase = false;
       };
-      
+
       # Git aliases for convenience
       alias = {
         st = "status";

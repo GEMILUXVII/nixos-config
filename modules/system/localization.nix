@@ -26,7 +26,7 @@
     QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
   };
-  
+
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
@@ -35,7 +35,7 @@
       qt6Packages.fcitx5-chinese-addons
     ];
   };
-  
+
   # Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.zed-mono

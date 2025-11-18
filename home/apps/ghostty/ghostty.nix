@@ -38,7 +38,7 @@
       background-blur = true
       # background-opacity = 0.9
       # window-padding-x = 2
-      
+
       # Start with maximized window
       window-width = 120
       window-height = 40

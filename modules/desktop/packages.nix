@@ -9,9 +9,9 @@
     lshw
     git
     zsh
-    
+
     # System services
     v2raya
-    
+
   ];
 }

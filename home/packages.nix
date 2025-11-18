@@ -5,7 +5,7 @@
   home.packages = with pkgs; [
     # File management
     yazi # terminal file manager
-    
+
     # Archives
     zip
     xz
@@ -36,7 +36,7 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
-    
+
     # Development
     vscode
     zig
@@ -44,19 +44,19 @@
     gfortran
     cmake
     gnumake
-    
+
     # Terminal
     ghostty
-    
+
     # Browsers
     google-chrome
     microsoft-edge
-    
+
     # Communication
     telegram-desktop
     qq
     wechat
-    
+
     # Media
     # qqmusic - 使用 Flatpak 版本（中文显示正常）
     splayer
