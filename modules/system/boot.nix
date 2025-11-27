@@ -13,6 +13,8 @@
     useOSProber = true;
     # gfxmodeEfi = "1920x1200,auto";
     configurationLimit = 7;
+
+    default = "Windows Boot Manager (on /dev/nvme1n1p1)";
   };
 
   # Use latest kernel
